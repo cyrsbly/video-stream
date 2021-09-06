@@ -46,15 +46,9 @@ async def start(_, m: Message):
                        ]]
                     ))
    else:
-      await m.reply_text("**✨ bot is online now ✨**",
+      await m.reply_text("**✨ Bot is online now ✨**",
                           reply_markup=InlineKeyboardMarkup(
                        [[
-                          InlineKeyboardButton(
-                             "❔ HOW TO USE THIS BOT", callback_data="cbguide")
-                       ],[
-                          InlineKeyboardButton(
-                             "🌐 Search Youtube", switch_inline_query='')
-                       ],[
                           InlineKeyboardButton(
                              "📚 Command List", callback_data="cblist")
                        ]]
@@ -68,15 +62,12 @@ async def alive(_, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        f"""✅ **bot is running**\n<b>💠 **uptime:**</b> `{uptime}`""",
+        f"""✅ **Bot is running**\n<b>💠 **uptime:**</b> `{uptime}`""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "✨ Group", url=f"https://t.me/VeezSupportGroup"
-                    ),
-                    InlineKeyboardButton(
-                        "📣 Channel", url=f"https://t.me/levinachannel"
+                        "📣 Channel", url=f"https://t.me/saibuboo"
                     )
                 ]
             ]
