@@ -36,18 +36,10 @@ async def start(_, m: Message):
                     reply_markup=InlineKeyboardMarkup(
                        [[
                           InlineKeyboardButton(
-                             "❔ HOW TO USE THIS BOT", callback_data="cbguide")
+                             "HOW TO USE THIS BOT", callback_data="cbguide")
                        ],[
                           InlineKeyboardButton(
-                             "🌐 Terms & Condition", callback_data="cbinfo")
-                       ],[
-                          InlineKeyboardButton(
-                             "💬 Group", url="https://t.me/VeezSupportGroup"),
-                          InlineKeyboardButton(
-                             "📣 Channel", url="https://t.me/levinachannel")
-                       ],[
-                          InlineKeyboardButton(
-                             "👩🏻‍💻 Developer", url="https://t.me/dlwrml")
+                             "Bot Owner", url="https://t.me/chimon_nnnnn")
                        ],[
                           InlineKeyboardButton(
                              "📚 All Command List", callback_data="cblist")
