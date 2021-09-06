@@ -31,15 +31,15 @@ group_call_factory = GroupCallFactory(app, GroupCallFactory.MTPROTO_CLIENT_TYPE.
 @Client.on_message(command(["vstream", f"vstream@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
 async def vstream(_, m: Message):
     if 1 in STREAM:
-        await m.reply_text("😕 **sorry, there's another video streaming right now**\n\n» **wait for it to finish then try again!**")
+        await m.reply_text("😕 **Sorry, there's another video streaming right now**\n\n» **wait for it to finish then try again!**")
         return
 
     media = m.reply_to_message
     if not media and not ' ' in m.text:
-        await m.reply_text("🔺 **please reply to a video or live stream url or youtube url to stream the video!**")
+        await m.reply_text("🔺 **Please reply to a video or live stream url or youtube url to stream the video!**")
 
     elif ' ' in m.text:
-        msg = await m.reply_text("🔄 **processing youtube stream...**")
+        msg = await m.reply_text("🔄 **Processing youtube stream...**")
         text = m.text.split(' ', 1)
         query = text[1]
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
